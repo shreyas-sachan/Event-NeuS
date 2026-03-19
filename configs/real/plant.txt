@@ -1,0 +1,94 @@
+### INPUT
+datadir = <PATH_TO_DATASET>
+scene = plant
+expname = plant
+basedir = <PATH_TO_LOGS>
+config = None
+ckpt_path = None
+no_reload = False
+testskip = 1
+trainskip = 1
+winsize = 100
+train_split=train
+
+is_colored = True
+event_threshold = 0.1
+polarity_offset = 0.0
+ 
+#seed_offset = 1
+seed_offset = 2
+is_cycled = True
+
+### TRAINING
+N_iters = 5000001
+N_rand = 64
+lrate = 1e-05
+lrate_decay_factor = 0.1
+lrate_decay_steps = 50000000
+
+neg_ratio = 0.1
+
+crop_r = 0.25
+crop_y_min = -0.065
+crop_y_max = 0.195
+
+### CASCADE
+cascade_level = 1
+cascade_samples = 64
+
+### TESTING
+chunk_size = 128
+
+### RENDERING
+det = False
+max_freq_log2 = 5
+max_freq_log2_viewdirs = 2
+N_anneal = 30000
+N_anneal_min_freq = 0
+N_anneal_min_freq_viewdirs = 2
+netdepth = 8
+netwidth = 256
+# use_viewdirs = True
+
+activation = tanh
+garf_sigma = 0.1
+
+with_bg = False
+tonemap_eps = 1e-05
+use_reg = True
+eikonal_reg_weight = 0.1
+
+use_annealing = True
+use_pe = True
+
+### CONSOLE AND TENSORBOARD
+i_img = 5000
+i_print = 100
+i_weights = 500
+
+
+### NEUS CONFIGS
+color_d_feature = 256
+color_mode = idr
+color_input_dim = 9
+color_output_dim = 3
+color_hidden_dim = 256
+color_n_layers = 4
+color_weight_norm = True
+color_squeeze_out = True
+
+
+sdf_bias = 0.5
+sdf_scale = 1.0
+sdf_d_out = 257
+sdf_geometric_init = True
+sdf_weight_norm = True
+sdf_inside_outside = False
+
+dev_init_val = 0.3
+
+n_samples = 256
+n_importance = 512
+n_outside = 0
+up_sample_steps = 4     # 1 for simple coarse-to-fine sampling
+perturb = 1.0

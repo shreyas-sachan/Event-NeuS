@@ -1,0 +1,36 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore log files
+logs/
+
+# Ignore output data
+data/
+results_mesh/
+BackgroundMatting/SAM-weights
+
+# Ignore unnecessary folders
+Neus/
+PyMarchingCubes/
+Original/
+RESTORE/
+archive/
+
+# Ignore compiled models or large output objects
+*.obj
+*.ply
+*.off
+
+# Ignore archives
+*.zip
+
+# Ignore compiled NeRF models
+*.png
+
+# Ignore configuration and temp files
+.vscode/
+
+# Ignore submission and slurm logs (if not needed)
+slurmlogs/
+
